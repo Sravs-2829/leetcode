@@ -5,12 +5,12 @@
 #         self.next = next
 class Solution:
     def deleteDuplicates(self, head):
-        current = head
+        ptr = head
 
-        while current and current.next:
-            if current.val == current.next.val:
-                current.next = current.next.next
+        while ptr and ptr.next:
+            if ptr.val == ptr.next.val:
+                ptr.next = ptr.next.next
             else:
-                current = current.next
+                ptr = ptr.next
 
         return head
